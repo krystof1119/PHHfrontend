@@ -1,0 +1,29 @@
+{
+  "name": "PHHfrontend",
+  "version": "1.0.0",
+  "description": "The frontend for my PHH (programmer humor hackathon) submission. Look away, the code and functionality hurts.",
+  "main": "/dev/null",
+  "repository": "https://github.com/krystof1119/PHHfrontend",
+  "author": "krystof1119 <35891551+krystof1119@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^8.2.2",
+    "@angular/cdk": "^8.1.3",
+    "@angular/common": "^8.2.2",
+    "@angular/core": "^8.2.2",
+    "@angular/forms": "^8.2.2",
+    "@angular/material": "^8.1.3",
+    "@angular/platform-browser": "^8.2.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "rxjs": "^6.5.2",
+    "vue": "^2.6.10",
+    "zone.js": "~0.9.1"
+  }
+}
