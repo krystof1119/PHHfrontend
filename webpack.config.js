@@ -1,6 +1,7 @@
 const path = require('path');
 let WebpackBeforeBuildPlugin = require('before-build-webpack');
 const fs = require('fs');
+let {ncp} = require('ncp');
 
 module.exports = {
   entry: './src/index.ts',
@@ -16,7 +17,7 @@ module.exports = {
   plugins: [
     new WebpackBeforeBuildPlugin(function (stats, callback) {
       fs.rmdir(path.resolve(__dirname, 'dist'), () => {
-        fs.copyFile(path.resolve(__dirname, 'public'), path.resolve(__dirname, 'dist'), (err) => {
+        ncp(path.resolve(__dirname, 'public'), path.resolve(__dirname, 'dist'), (err) => {
           if (err) throw err;
           callback();
         })
