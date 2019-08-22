@@ -3,6 +3,8 @@ const path = require('path');
 let WebpackBeforeBuildPlugin = require('before-build-webpack');
 const fs = require('fs');
 let {ncp} = require('ncp');
+let CopyPlugin = require('copy-webpack-plugin');
+let { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -30,19 +32,18 @@ module.exports = {
   plugins: [
     new WebpackBeforeBuildPlugin(function (stats, callback) {
       console.log('Compiling...');
-      fs.rmdir(path.resolve(__dirname, 'dist'), () => {
-        ncp(path.resolve(__dirname, 'public'), path.resolve(__dirname, 'dist'), (err) => {
-          if (err) throw err;
-          callback();
-        })
-      })
+      callback();
     }),
     new AngularCompilerPlugin({
       tsConfigPath: 'tsconfig.json',
       /*mainPath: 'src/angular/main.ts',*/
       entryModule: 'src/angular/app/app.module#AppModule',
       sourceMap: true
-    })
+    }),
+    new CopyPlugin([
+      { from: 'public', to: '.' }
+    ]),
+    new CleanWebpackPlugin()
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
