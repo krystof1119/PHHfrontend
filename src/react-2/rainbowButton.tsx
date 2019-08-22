@@ -11,5 +11,10 @@ export default function RainbowButton(props) {
             clearInterval(interval);
         };
     }, []);
-    return (<p>Rainbow button { color }</p>)
+    return (
+        <div
+            className={'rainbow-button'}
+            style={{backgroundColor: '#' + color.toString(16).toUpperCase().padStart(6, '0')}}
+        />
+    )
 }
