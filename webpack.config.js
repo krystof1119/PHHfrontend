@@ -8,6 +8,10 @@ let { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
+  watchOptions: {
+    ignored: path.resolve(__dirname, 'dist'),
+    poll: true
+  },
   module: {
     rules: [
       {
