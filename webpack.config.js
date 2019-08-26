@@ -30,6 +30,21 @@ module.exports = {
       {
         test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
         loader: '@ngtools/webpack'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          "postcss-loader" // has separate config, see postcss.config.js nearby
+        ]
       }
     ],
   },
