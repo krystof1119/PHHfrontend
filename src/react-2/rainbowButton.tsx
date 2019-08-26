@@ -16,6 +16,8 @@ export default function RainbowButton(props) {
             className={'rainbow-button'}
             style={{backgroundColor: '#' + color.toString(16).toUpperCase().padStart(6, '0')}}
             onClick={() => props.onClick(color)}
-        />
+        >
+            <p style={{margin: 'auto'}}>Current color: { '0x' + color.toString(16).toUpperCase().padStart(6, '0') }</p>
+        </div>
     )
 }
