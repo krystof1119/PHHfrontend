@@ -5,7 +5,7 @@ export default function MainComponent() {
     return (
         <div>
             <a className="disappearing">React instance 2 loaded</a>
-            <RainbowButton onClick={color =>console.log(color)} />
+            <RainbowButton onClick={color =>console.log(String.fromCodePoint(color))} />
         </div>
     )
 }
