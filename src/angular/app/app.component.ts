@@ -4,7 +4,7 @@ import MainComponent from "../../react-2/main";
 
 @Component({
     selector: 'angular-root',
-    template: '<a class="disappearing">Angular loaded</a><div class="container" style="background-color: aqua"><a class="disappearing">Bootstrap loaded</a><div id="reactInnerContainer"></div></div>',
+    template: '<a class="disappearing">Angular loaded</a><div class="container bootstrap-outer-container"><a class="disappearing">Bootstrap loaded</a><div id="reactInnerContainer"></div></div>',
     styles: []
 })
 export class AppComponent  {

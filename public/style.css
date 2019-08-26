@@ -19,3 +19,14 @@
     text-align: center;
     font-size: 2.25vw;
 }
+
+body {
+    background-color: #100E17;
+    color: white;
+}
+
+
+.bootstrap-outer-container {
+    background-color: #EC6B40;
+    border-radius: 15px;
+}
