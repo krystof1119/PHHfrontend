@@ -46,8 +46,8 @@ module.exports = {
     }),
     new CopyPlugin([
       { from: 'public', to: '.' }
-    ]),
-    new CleanWebpackPlugin()
+    ])/*,
+    new CleanWebpackPlugin()*/
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
