@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as ReactDOM from 'react-dom';
 import MainComponent from "../../react-2/main";
+import * as React from "react";
 
 @Component({
     selector: 'angular-root',
@@ -10,6 +11,6 @@ import MainComponent from "../../react-2/main";
 export class AppComponent  {
     ngOnInit() {
         let reactInnerContainer = document.getElementById('reactInnerContainer');
-        ReactDOM.render(MainComponent(), reactInnerContainer)
+        ReactDOM.render(React.createElement(MainComponent), reactInnerContainer)
     }
 }

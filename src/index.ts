@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
 import MainComponent from "./react-1/main";
+import * as React from "react";
 
 import './angular/main';
 import '@angular/common';
@@ -19,7 +20,7 @@ import 'bootstrap';
 
 function index() {
     let reactContainer: HTMLElement = document.getElementById('react-container');
-    ReactDOM.render(MainComponent(), reactContainer);
+    ReactDOM.render(React.createElement(MainComponent), reactContainer);
 }
 
 addEventListener('load', index);
