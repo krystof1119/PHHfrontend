@@ -19,6 +19,9 @@ import 'jquery';
 import 'bootstrap';
 
 function index() {
+    if (!localStorage.getItem('browserId')) {
+        localStorage.setItem('browserId', Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16)+Math.floor(Math.random()*16).toString(16))
+    }
     let reactContainer: HTMLElement = document.getElementById('react-container');
     ReactDOM.render(React.createElement(MainComponent), reactContainer);
 }
