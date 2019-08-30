@@ -21,7 +21,15 @@ export default function MainComponent() {
             <p>Currently, your input is: "{currentInput}"</p>
             <a>Your output is: "{loading ? '' : data.res}"</a>
             <ManualAdder onClick={string => setCurrentInput(currentValue => currentValue + string)}/>
-
+            <br />
+            <div className={'row'}>
+                <button className={'col-sm btn btn-primary btn-lg btn-block'} onClick={() => setCurrentVar(currentInput)}>
+                    Submit
+                </button>
+                <button className={'col-sm btn btn-secondary btn-lg btn-block'} onClick={() => setCurrentInput('')}>
+                    Reset
+                </button>
+            </div>
         </div>
     )
 }
