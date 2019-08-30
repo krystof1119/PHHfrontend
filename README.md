@@ -25,3 +25,10 @@ for too long, you may exhibit the following symptoms
 * Coding without CTRL-C, CTRL-V and CTRL-Z
 
 Still want to run this code? Alright, here's the instructions.
+
+1. Download this code (probably with GIT but whatever counts)
+2. Deploy (or run) the backend code
+3. Put the backend address into src/config.ts
+4. `yarn install`
+5. `yarn run build`
+6. Open dist/index.html in your browser
