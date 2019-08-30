@@ -23,7 +23,7 @@ export default function MainComponent() {
             <ManualAdder onClick={string => setCurrentInput(currentValue => currentValue + string)}/>
             <br />
             <div className={'row'}>
-                <button className={'col-sm btn btn-primary btn-lg btn-block'} onClick={() => setCurrentVar(currentInput)}>
+                <button className={'col-sm btn btn-primary btn-lg btn-block'} onClick={() => {setCurrentVar(currentInput);setCurrentInput('')}}>
                     Submit
                 </button>
                 <button className={'col-sm btn btn-secondary btn-lg btn-block'} onClick={() => setCurrentInput('')}>
