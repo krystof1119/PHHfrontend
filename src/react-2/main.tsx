@@ -9,10 +9,10 @@ export default function MainComponent() {
     let [currentInput, setCurrentInput] = useState('');
     let [currentVar, setCurrentVar] = useState('');
     const {data, loading} = useQuery(gql`
-    query getData($var: String!){
-        res(var: $var)
+    query getData($var: String!, $browserId: String!){
+        res(var: $var, browserId: $browserId)
     }
-    `, {variables: {var: currentVar}});
+    `, {variables: {var: currentVar, browserId: localStorage.getItem('browserId')}});
     return (
         <div>
             <a className="disappearing">React instance 2 loaded</a>
