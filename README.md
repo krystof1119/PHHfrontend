@@ -26,6 +26,12 @@ for too long, you may exhibit the following symptoms
 
 Still want to run this code? Alright, here's the instructions.
 
+## Prerequisites
+
+Have node.js and yarn installed, along with a recent web browser.
+
+## How to run
+
 1. Download this code (probably with GIT but whatever counts)
 2. Deploy (or run) the backend code
 3. Put the backend address into src/config.ts
