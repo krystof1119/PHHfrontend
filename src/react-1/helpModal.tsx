@@ -42,8 +42,10 @@ export default function HelpModal(props) {
                     Your response will be in a textbox lower in the page.</p>
                     <h2>A list of commands</h2>
                     <ul>
-                        <li><b>adventure</b> - open a text adventure to play, right here.</li>
+                        <li><b>adventure</b> - open a text adventure to play, right here. use quit to disable. Please do test this, it is awesome.</li>
                         <li><b>hello</b> - the first program everyone writes.</li>
+                        <li><b>test</b> - it sees you are testing</li>
+                        <li><b>multiline</b> - to prove that you can do multiline responses</li>
                     </ul>
                 </div>
                 <button className={'btn btn-secondary btn-lg btn-block'} onClick={() => props.onClose()}>CLOSE HELP
