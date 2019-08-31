@@ -27,7 +27,8 @@ class MainComponent extends React.Component<{ client: ApolloClient<object> }, { 
         this.props.client.query({
             query: gql`query getData($var: String!, $browserId: String!){
                 res(var: $var, browserId: $browserId)
-            }`, variables: {var: this.state.currentInput, browserId: localStorage.getItem('browserId')}
+            }`, variables: {var: this.state.currentInput, browserId: localStorage.getItem('browserId')},
+            fetchPolicy: "no-cache"
         })
             .then(res => {
                 console.log(res.data.res);
