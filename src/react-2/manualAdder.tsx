@@ -12,7 +12,6 @@ export default function ManualAdder(props) {
                 label={'Showcase mode'}
                 onChange={val => setVisible(val)}
             />
-            <br/>
             <div>
                 <div style={visible ? {maxWidth: '12cm', margin: 'auto'} : {display: "none"}}>
                     <p>In a "real deployment", this won't be visible. However, for the showcase, I enabled you to cheat
